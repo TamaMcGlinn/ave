@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -e
+docker login
+docker push -a tmcglinn/ave

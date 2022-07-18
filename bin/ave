@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+docker run -it -v "$(pwd):/adabots_examples/src" -v "$(pwd)/bin:/adabots_examples/bin" --workdir=/adabots_examples tmcglinn/ave:latest nvim "src/$1"
