@@ -2,8 +2,10 @@ FROM anatolelucet/neovim:nightly-ubuntu
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update
-RUN apt-get install -y git wget curl
+RUN sudo apt-get update \
+ && sudo apt-get install -y \
+    git wget curl \
+ && sudo rm -rf /var/lib/apt/lists/*
 
 # Install plug
 RUN sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
