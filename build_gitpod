@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -e
+IMAGE="tmcglinn/ada_gitpod"
+source version_gitpod
+docker build -f Dockerfile_gitpod -t ${IMAGE}:${VERSION} .
+docker tag ${IMAGE}:${VERSION} ${IMAGE}:latest
