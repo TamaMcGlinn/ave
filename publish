@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 set -e
+source version
 docker login
-docker push -a tmcglinn/ave
+docker push "tmcglinn/ave:$VERSION"
+docker push tmcglinn/ave:latest
